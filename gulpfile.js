@@ -9,7 +9,7 @@ let gulp = require('gulp'), //Сам gulp D
   pngquant = require('imagemin-pngquant'),// Подключаем библиотеку для работы с png
   cache = require('gulp-cache'), // Подключаем библиотеку кеширования
   fetch = require('node-fetch'),
-  build = 2;
+  build = 3;
 
 
 console.log('Gulp by levenokk version 1.1, build 2\n');
