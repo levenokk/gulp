@@ -9,10 +9,10 @@ let gulp = require('gulp'), //Сам gulp D
   pngquant = require('imagemin-pngquant'),// Подключаем библиотеку для работы с png
   cache = require('gulp-cache'), // Подключаем библиотеку кеширования
   fetch = require('node-fetch'),
-  build = 1;
+  build = 3;
 
 
-console.log('Gulp by levenokk version 1.0, build 1\n');
+console.log('Gulp by levenokk version 1.1, build 2\n');
 async function checkVer() {
   let check = await fetch('https://raw.githubusercontent.com/levenokk/gulp/dev/version.json');
   let json = await check.json();
