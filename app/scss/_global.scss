@@ -1,1 +1,223 @@
-// Здесь храняться стили для чего-то глобального, например кнопок 
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat";
+    min-height: 100vh;
+}
+
+a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.h1 {
+    font-family: Sansation;
+    font-size: 50px;
+    line-height: 1.1em;
+    letter-spacing: 0.05em;
+    text-shadow: -1px 4px 4px rgba(0, 0, 0, 0.25);
+    max-width: 692px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.section {
+    background-color: #fff;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.button {
+    background: conic-gradient( from 103.96deg at 24.23% -28.12%, #00ff2c -15.69deg, rgba(0, 255, 56, 0.58) 0.82deg, #00ff29 2.88deg, #00ff2c 320.31deg, rgba(0, 255, 56, 0.58) 360.82deg);
+    border-radius: 50px;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2em;
+    display: inline-block;
+    margin-bottom: 140px;
+    color: #ffffff;
+    padding: 0.7em 2.5em;
+    cursor: pointer;
+    border: none;
+}
+
+// #pp-nav span {
+//     top: 2px;
+//     left: 2px;
+//     width: 10px;
+//     height: 10px;
+//     border: none;
+//     background: #c4c4c4;
+// }
+// #pp-nav li .active span {
+//     background-color: #00ff2c;
+// }
+// #pp-nav {
+//     margin-top: 0 !important;
+//     transform: translateY(-50%);
+//     ul {
+//         li {
+//             position: relative;
+//             margin-bottom: 84px !important;
+//             &::after {
+//                 content: "lol";
+//                 position: absolute;
+//                 left: -80px;
+//                 top: 0px;
+//                 font-family: Sansation;
+//                 font-size: 10px;
+//                 line-height: 1.1em;
+//                 color: rgba(0, 0, 0, 0.54);
+//             }
+//             &:last-child {
+//                 margin-bottom: 0 !important;
+//             }
+//         }
+//     }
+// }
+.onepage-pagination {
+    transform: translateY(-50%);
+    padding-top: 80px;
+    right: 120px;
+    li {
+        margin-bottom: 100px;
+        position: relative;
+        min-height: 18px;
+        &::after {
+            content: "";
+            width: 1px;
+            height: 90px;
+            background-color: black;
+            position: absolute;
+            right: 5px;
+            top: calc(100% + 3.5px);
+        }
+        a {
+            width: auto;
+            height: auto;
+            position: relative;
+            padding: 0;
+            padding-right: 46px;
+            line-height: 1em;
+            span {
+                visibility: hidden;
+                font-family: Sansation;
+                font-size: 10px;
+                line-height: 1.1em;
+                color: rgba(0, 0, 0, 0.54);
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background-color: #c4c4c4;
+                border: none;
+                right: 0;
+                top: 50%;
+                left: auto;
+                bottom: auto;
+                transform: translateY(-50%);
+                margin: 0;
+            }
+            &.active {
+                span {
+                    visibility: visible;
+                }
+                &:before {
+                    content: "";
+                    background-color: #00ff2c;
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    border: none;
+                    bottom: auto;
+                    right: 0;
+                    left: auto;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    margin: 0;
+                }
+                &::after {
+                    content: "";
+                    right: 24px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 10px;
+                    height: 1px;
+                    background-color: black;
+                    position: absolute;
+                }
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+            &::after {
+                display: none;
+            }
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+.number__page {
+    position: fixed;
+    right: 20px;
+    font-weight: bold;
+    top: 40%;
+    font-size: 30px;
+    line-height: 1.3em;
+}
+
+.pages {
+    font-family: "PT Mono";
+    font-weight: bold;
+    position: absolute;
+    font-size: 30px;
+    line-height: 1.3em;
+    color: black;
+    top: 0;
+    right: 0;
+}
+
+.next-section,
+.prev-section {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 35px;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: black;
+    cursor: pointer;
+}
+
+.prev-section {
+    top: -33px;
+    line-height: 90px;
+    img {
+        transform: rotate(180deg);
+    }
+}
+
+h5 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.2em;
+    text-align: center;
+    margin-bottom: 1.2em;
+}
